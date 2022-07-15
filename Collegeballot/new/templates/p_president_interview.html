@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Responsive Sidebar Menu</title> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <script>
+      labelname1=['No. of votes'];
+      function getGraph2()
+      {
+      new Chart(document.getElementById("ganpatibapa").getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: {{pollst|safe}},
+      datasets: [
+        {
+          label: "No. of votes",
+          backgroundColor: [
+
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+          data: {{pollvotes|safe}},
+          barThickness : 100
+        },
+
+      ]
+    },
+    options: {
+      //  legend: { display: false },
+     title: {
+        display: true,
+        text: 'Results of selection for final candidates'
+      },
+      scales : {
+
+xAxes: [{
+            barPercentage: 0.4
+        }],
+        yAxes: [{stacked:true}]
+      }
+    }
+    });
+}
+      </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;   //#1D9DA2   #B8DBDD
+  text-decoration: none;
+
+}
+
+.login{
+  background-color:#708090;
+  width:100px;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: 0 7px #000;
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  font-family: "Lucida Grande";
+  margin-left: 35px;
+  margin-bottom: 20px;
+}
+.login-page {
+
+  width:450px;
+  margin-left:520px;
+  border-bottom: 2px solid #A9A9A9;
+
+}
+.login:active {
+  position: relative;
+  top: 10px;
+  box-shadow: none;
+}
+.login:hover{
+  background-color: #696969
+}
+
+.contact-form p{
+  width:600px;
+  margin:0 auto;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.contact-form {
+  padding-top: 0px;
+  text-align:center;
+}
+
+input,textarea{
+  width:400px;
+  height: 20px;
+  margin-top:10px;
+  margin-bottom:30px;
+  padding:20px;
+  font-size:18px;
+  border: 1px solid #dee7ec;
+  font-family: "Lucida Grande";
+  border-bottom:2px solid #A9A9A9;
+  outline: none;
+  background-color: #dcdcdc;
+  color: black;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor: auto;
+  opacity: 0.9;
+
+}
+input:hover,textarea:hover {
+    border: 2px solid #000;
+}
+.contact-form span{
+  margin-top: 20px;
+color:red;
+}
+.contact-submit{
+  background-color:#708090;
+  color: white;
+  box-shadow:0 7px black;
+  cursor:pointer;
+  width: 100px;
+  height: 60px;
+  padding: 5px 5px;
+  font-size: 18px;
+  border-radius: 5px;
+ }
+ .contact-submit:hover{
+border: 2px solid white;
+background-color: #696969;
+ }
+
+.contact-submit:active{
+ position:relative;
+ box-shadow:none;
+ top:7px;
+}
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+header {
+  height:110px;
+  width: 100%;
+  background-color: #1D9DA2;
+  position :fixed;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+  //margin-left:2px;
+}
+
+.logo {
+  width: 100px;
+  margin-top: 0px;
+  left:0px;
+  margin-left: -30px;
+}
+footer img {
+  width: px;
+}
+footer .logo{
+margin-left:-130px;
+}
+
+
+footer {
+  height: 145px;
+  width: 100%;
+  background-color: #B8DBDD;
+  z-index: 10;
+  text-align: left;
+
+}
+
+footer p {
+  margin-left:-20px;
+color: #000000;
+font-size: 12px;
+margin-top:0px;
+
+}
+
+.footer-left {
+  float: left;
+}
+
+
+.header-left {
+  float: left;
+}
+
+.header-right{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-right: 0px;
+  padding-top: 8px;
+}
+
+.header-right p{
+  margin-top: 10px;
+}
+.sidebar{
+  position: relative;
+  width: 240px;
+  left: 0;//-240px;
+  height: 100%;
+  background: #1D9DA2;
+  margin-top:110px;
+  transition: all .5s ease;
+
+
+}
+.sidebar header1{
+  font-size: 28px;
+  color: black;
+  line-height: 70px;
+  text-align: center;
+  background-color: #1D9DA2;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar a{
+  display: block;
+  height: 70px;
+  width: 100%;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+  background-color: #B8DBDD;
+  color:black;
+  text-decoration: none;
+}
+a.active,a:hover{
+  border-left: 5px solid black;
+  color: #1D9DA2;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header1,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .login{
+  background-color:#708090;
+  width:100px;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: 0 7px #000;
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  font-family: "Lucida Grande";
+  margin-left: 35px;
+  margin-bottom: 20px;
+}
+.login-page {
+
+  width:450px;
+  margin-left:520px;
+  border-bottom: 2px solid #A9A9A9;
+
+}
+.login:active {
+  position: relative;
+  top: 10px;
+  box-shadow: none;
+}
+.login:hover{
+  background-color: #696969
+}
+
+
+
+    </style>
+  </head>
+  <body onload="getGraph2()">
+   <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="https://i.ibb.co/v3wbrxW/logo.png">
+        </div>
+        <div class="header-right">
+          <p>Welcome Student!</p>
+        </div>
+
+        <!-- Add a menu icon here -->
+      </div>
+    </header>
+    <div class = "dash" style="font-size:20px; margin-right:200px; margin-top:40px; float:right; font-family:Palatino, serif; font-weight:300; display:inline-block; text-align:center;">
+
+    <div id="int1" class="contact-form">
+         <p style="font-weight:bold;">You can notice a mass bunk being planned.<br></p><br>
+        <form action="p_president_interview.html" method="post">
+            {% csrf_token %}
+        <p>What will you do in this situation? <span>*</span></p>
+        <textarea type="text" name="ans" required=" " ></textarea><br>
+          <button class="contact-submit" type="submit" name="interview" value="SUBMIT">SUBMIT</button>
+
+    </form>
+         </div>
+        <div id="int2">
+            <p style="font-weight:bold; text-align:left; font-size:30px;">You can notice a mass bunk being planned.<br></p><br>
+       <p style="font-weight:bold; text-align:left; font-size:30px;">Please vote for any one answer of your choice<br></p><br>
+     <form action="p_president_interview.html" method="post">
+     {% csrf_token %}
+       {% for i,j in r %}
+       <p style="text-align:left; font-size:27px;" > {{j}} : {{i}} </p>
+     {% endfor %}
+<input type="text" name="answer" placeholder="Enter answer no." required="" >
+       <button class="login" name="idbut" type="submit" value="VOTE"> Vote</button>
+     </form>
+           <p style="font-weight:bold;"> </p><br>
+
+        </div>
+   </div>
+
+   <div id="int3" >
+       <div class="container" style="margin-right: -500px; margin-top: 17px; float:right;">
+    <div class="row">
+
+      <div class="col-6 chart" >
+        <canvas id="ganpatibapa"  width="500" height="400"></canvas>
+      </div>
+    </div>
+  </div>
+   </div>
+
+
+   <script>
+     var countans="{{countans}}"
+     var abc="{{abc}}"
+     if(countans=='yes')
+     {
+     if(abc==1)
+       {
+       document.getElementById('int3').hidden=false;
+       document.getElementById('int1').hidden=true;
+       document.getElementById('int2').hidden=true;
+       }
+       else
+       {
+       document.getElementById('int3').hidden=true;
+       document.getElementById('int1').hidden=true;
+       }
+     }
+     else
+     {
+     document.getElementById('int3').hidden=true;
+     document.getElementById('int2').hidden=true;
+     }
+   </script>
+    <div class="sidebar">
+      <a href="profile.html" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="p_cr_reg.html">
+        <i class="fas fa-house-user"></i>
+        <span>Cr Registration</span>
+      </a>
+      <a href="p_vote_cr.html">
+        <i class="fas fa-vote-yea"></i>
+        <span>Cr Elections</span>
+      </a>
+      <a href="p_depthead.html">
+         <i class="fas fa-address-book"></i>
+        <span>Head Of Dept.</span>
+      </a>
+      <a href="p_president_interview.html" class="active">
+        <i class="fas fa-file-alt"></i>
+        <span>Poll</span>
+      </a>
+        <a href="p_poll.html">
+        <i class="fas fa-file-alt"></i>
+        <span>Pres.Elections</span>
+      </a>
+      <a href="p_final_president.html">
+        <i class="fas fa-users"></i>
+        <span>President</span>
+      </a>
+      <a href="login.html">
+        <i class="fas fa-power-off"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+
+
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+        <img class="logo" src="https://i.ibb.co/v3wbrxW/logo.png">
+        <p>SNAP INTO A SLIM COLLEGE ELECTION!</p>
+      </div>
+      </div>
+    </footer>
+</body>
+</html>

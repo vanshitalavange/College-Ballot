@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Ballot | HOD Login </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+      body {
+  margin-top:100px;
+  font-family: "Lucida Grande";
+}
+*{
+  padding:0px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+.section-title {
+  width:50%;
+  font-size: 30px;
+  text-align:center;
+  padding:20px 0;
+  border-bottom: 2px solid #A9A9A9;
+ margin:0 auto;
+}
+.registration-submit{
+  text-align:center;
+}
+.submit{
+  background-color: #708090;
+ font-weight: bold;
+ font-size: 16px;
+padding-top: 10px;
+cursor: pointer;
+margin:auto;
+   box-shadow: 0 7px #000;
+   width : 100px;
+   height: 30px;
+text-align: center;
+}
+
+.submit:active{
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+.registration-form {
+width:600px;
+margin:0 auto;
+font-size: 20px;
+}
+.registration-form p{
+  padding: 0px 80px;
+}
+input,textarea {
+  outline:none;
+  background-color:#dcdcdc;
+  display: block;
+  margin:0 auto;
+  color:black;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor:auto;
+  opacity:0.9;
+  font-family: "Lucida Grande";
+  border-bottom: 2px solid #A9A9A9;
+
+}
+input:hover,textarea:hover {
+    border: 2px solid #000;
+}
+
+h1{
+  font-size: 30px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  opacity:0.9;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #A9A9A9;
+}
+a{
+  border-bottom: 2px solid black;
+}
+span {
+  font-weight: bolder;
+  color:red;
+}
+.box{
+  width:400px;
+  padding:40px 10px 10px 10px;
+  text-align: center;
+}
+.box input[type="text"],.box input[type="password"]{
+  outline:none;
+  background-color:#dcdcdc;
+  display: block;
+  margin-right: 50px;
+  color:black;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor:auto;
+  font-family: "Lucida Grande";
+  border-bottom: 2px solid #A9A9A9;
+}
+.box input[type="text"]:hover{
+  border: 2px solid #000;
+  }
+.box input[type="password"]:hover{
+  border: 2px solid #000;
+}
+.login{
+  background-color:#708090;
+  width:100px;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: 0 7px #000;
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  font-family: "Lucida Grande";
+  margin-left: 35px;
+  margin-bottom: 20px;
+}
+.login-page {
+
+  width:450px;
+  margin-left:520px;
+  border-bottom: 2px solid #A9A9A9;
+
+}
+.login:active {
+  position: relative;
+  top: 10px;
+  box-shadow: none;
+}
+.login:hover{
+  background-color: #696969
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  margin-left: 0px ;
+  position: relative;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0px;
+}
+
+.btn {
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+  margin:auto;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+header {
+  height: 110px;
+  width: 100%;
+  background-color: #1D9DA2;
+  position :fixed;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.logo {
+  width: 110px;
+  margin-top: 0px;
+  left:0px;
+  margin-left: 30px;
+}
+
+
+.header-left {
+  float: left;
+  margin-top: 0px;
+}
+
+.header-right{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-right: 140px;
+  padding-top: 20px;
+}
+
+.contact-form {
+  padding-top: 100px;
+}
+.form{
+  text-align:center;
+  width:50%;
+  margin:0 auto;
+}
+
+input,textarea{
+  width:400px;
+  margin-top:30px;
+  margin-bottom:30px;
+  padding:20px;
+  font-size:18px;
+  border: 1px solid #dee7ec;
+}
+
+
+.message-wrapper {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 40px;
+  text-align:center;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+.container h4{
+  font-size: 20px;
+opacity:0.8;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer {
+  height: 140px;
+  width: 100%;
+  background-color: #B8DBDD;
+  margin-top:0px;
+  z-index: 10;
+  text-align: left;
+
+}
+
+footer p {
+  margin-left:5px;
+color: #000000;
+font-size: 12px;
+
+}
+footer .logo{
+margin-left:-55px;
+}
+
+
+.footer-left {
+  float: left;
+}
+
+.message2{
+  background-color: #5dca88;
+  padding: 12px 24px;
+   text-align: center;
+   margin-right: 45px;
+   margin-top:10px;
+   cursor: pointer;
+   box-shadow: 0 7px #1a7940;
+}
+.message2:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+  padding: 10px 10px 10px 40px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="https://i.ibb.co/v3wbrxW/logo.png">
+        </div>
+        <div class="header-right">
+          <p>HOD Login</p>
+        </div>
+      </div>
+    </header>
+    <div class="login-page" style="margin-left:400px;">
+    <form class="box" action="hod_trial.html" autocomplete="off" method="post">
+        {% csrf_token %}
+ <input type="text" name="username" placeholder="Username" required>
+ <input type="password" name="password" placeholder="Password" required>
+
+  <button type='submit' class="login">LOGIN</button>
+
+</form>
+</div>
+    <div class="message-wrapper">
+      <div class="container">
+
+         <h4 style="margin-top:10px;">For troubleshooting, click below.</h4>
+         </div>
+           <span style="margin-left:45px;" class="btn message2">HELP</span>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+        <img class="logo" src="https://i.ibb.co/v3wbrxW/logo.png">
+        <p>SNAP INTO A SLIM COLLEGE ELECTION!</p>
+      </div>
+      </div>
+    </footer>
+  </body>
+</html>

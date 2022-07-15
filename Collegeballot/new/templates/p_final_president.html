@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;   //#1D9DA2   #B8DBDD
+  text-decoration: none;
+
+}
+
+.login{
+  background-color:#708090;
+  width:100px;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: 0 7px #000;
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  font-family: "Lucida Grande";
+  margin-left: 35px;
+  margin-bottom: 20px;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+header {
+  height:110px;
+  width: 100%;
+  background-color: #1D9DA2;
+  position :fixed;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+  //margin-left:2px;
+}
+
+.logo {
+  width: 100px;
+  margin-top: 0px;
+  left:0px;
+  margin-left: 30px;
+}
+footer img {
+  width: px;
+}
+footer .logo{
+margin-left:-55px;
+}
+
+
+footer {
+  height: 120px;
+  width: 100%;
+  background-color: #B8DBDD;
+  z-index: 10;
+  text-align: left;
+
+}
+
+footer p {
+  margin-left:5px;
+color: #000000;
+font-size: 12px;
+margin-top:0px;
+
+}
+
+.footer-left {
+  float: left;
+}
+
+
+.header-left {
+  float: left;
+}
+
+.header-right{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-right: 0px;
+  padding-top: 8px;
+}
+
+.header-right p{
+  margin-top: 10px;
+}
+.sidebar{
+  position: relative;
+  width: 240px;
+  left: 0;//-240px;
+  height: 100%;
+  background: #1D9DA2;
+  margin-top:110px;
+  transition: all .5s ease;
+
+
+}
+.sidebar header1{
+  font-size: 28px;
+  color: black;
+  line-height: 70px;
+  text-align: center;
+  background-color: #1D9DA2;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar a{
+  display: block;
+  height: 70px;
+  width: 100%;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+  background-color: #B8DBDD;
+  color:black;
+  text-decoration: none;
+}
+a.active,a:hover{
+  border-left: 5px solid black;
+  color: #1D9DA2;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header1,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+
+    </style>
+  </head>
+  <body>
+   <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="https://i.ibb.co/v3wbrxW/logo.png">
+        </div>
+        <div class="header-right">
+          <p>Welcome Student!</p>
+        </div>
+      </div>
+    </header>
+    <div >
+     <img style="width:400px; height:400px; margin-right: 20px; margin-top:50px; float:right; " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6b4Ez5uF1YQptgHptZg8vzqRRmwpbgiyx8w&usqp=CAU">
+   </div>
+   <div class = "dash" style="font-size:30px; margin-right:300px; margin-top:-400px; float:right; fonat-family:Palatino, serif; font-weight:300; display:inline-block;">
+    <div id="pres1"><p style="font-weight:bold;">Congratulations! Your President has been elected</p><br>
+
+    {% for i in f %}
+     <p style="margin-right:300px;"> Name: {{i.name}} </p><br>
+     <p>Year: {{i.year}}</p><br>
+     <p>Department:  {{i.dept}} </p><br>
+     <p>Division: {{i.div}} </p><br>
+     <p>Roll no: {{i.rollno}}</p><br>
+     {% endfor %}
+   </div>
+   </div>
+   <script>
+       var vb="{{vb}}";
+       if(vb==12)
+       {
+         document.getElementById('pres1').hidden=false;
+       }
+       else
+       {
+       document.getElementById('pres1').hidden=true;
+       alert("Voting is still in process..");
+       window.location='profile.html';
+       }
+   </script>
+
+
+    <div class="sidebar">
+      <a href="profile.html" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="p_cr_reg.html">
+        <i class="fas fa-house-user"></i>
+        <span>Cr Registration</span>
+      </a>
+      <a href="p_vote_cr.html">
+        <i class="fas fa-vote-yea"></i>
+        <span>Cr Elections</span>
+      </a>
+      <a href="p_depthead.html">
+         <i class="fas fa-address-book"></i>
+        <span>Head Of Dept.</span>
+      </a>
+      <a href="p_president_interview.html">
+        <i class="fas fa-file-alt"></i>
+        <span>Poll</span>
+      </a>
+        <a href="p_poll.html">
+        <i class="fas fa-file-alt"></i>
+        <span>Pres.Elections</span>
+      </a>
+      <a href="p_final_president.html" class="active">
+        <i class="fas fa-users"></i>
+        <span>President</span>
+      </a>
+      <a href="login.html">
+        <i class="fas fa-power-off"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+        <img class="logo" src="https://i.ibb.co/v3wbrxW/logo.png">
+        <p>SNAP INTO A SLIM COLLEGE ELECTION!</p>
+      </div>
+      </div>
+    </footer>
+</body>
+</html>
